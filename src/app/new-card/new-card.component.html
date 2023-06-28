@@ -1,0 +1,49 @@
+<div class = "content">
+  <button id = "button3" class="button3" (click)="logOut()">Log Out</button>
+  <h1>Select Your Card</h1>
+  <div class = "cards">
+    <div class='card' (click)="createCard('MASTERCARD')"  data-tooltip="No taxes sending money">
+      <div class='top-block'>
+        <div class='card-chip'>
+          <i class="icon-credit-card icon-3x"></i>
+        </div>
+        <span id = "cardType" class='card-name'>
+         MASTERCARD
+       </span>
+      </div>
+      <div class='card-number'>
+        <p>xxxx xxxx xxxx xxxx</p>
+      </div>
+      <div class='bottom-block'>
+        <div class='card-icon'>
+               <span class='circle-left'>
+                    <i class="icon-circle icon-3x "></i>
+               </span>
+          <i class="icon-circle icon-3x"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class='card2' (click)="createCard('VISA')"  data-tooltip="No taxes exchanging money">
+      <div class='top-block'>
+        <div class='card-chip'>
+          <i class="icon-credit-card icon-3x"></i>
+        </div>
+        <span class='card-name'>
+         VISA
+       </span>
+      </div>
+      <div class='card-number'>
+        <p>xxxx xxxx xxxx xxxx</p>
+      </div>
+      <div class='bottom-block'>
+        <div class='card-icon'>
+               <span class='circle-left'>
+                    <i class="icon-circle icon-3x "></i>
+               </span>
+          <i class="icon-circle icon-3x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
