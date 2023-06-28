@@ -1,0 +1,10 @@
+#divInner{
+  left: 0;
+  position: sticky;
+}
+
+#divOuter{
+  width: 190px;
+  overflow: hidden;
+  margin-left: 350px;
+}
