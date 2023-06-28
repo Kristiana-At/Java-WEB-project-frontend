@@ -1,0 +1,92 @@
+.cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card2 {
+  height: 200px;
+  width: 300px;
+  background-image:linear-gradient(rgb(41, 103, 202), rgb(134, 170, 215));
+  border-radius: 20px;
+  color:white;
+  margin:30px;
+  font-size: 20px;
+  box-shadow: 2px 2px 20px #707070;
+  cursor: pointer;
+}
+.card {
+  height: 200px;
+  width: 300px;
+  background-image:linear-gradient(rgba(255, 61, 61, 1),rgba(255, 61, 61, 0.8));
+  border-radius: 20px;
+  color:white;
+  margin:30px;
+  font-size: 20px;
+  box-shadow: 2px 2px 20px #707070;
+  cursor: pointer;
+}
+
+.top-block {
+  display: inline-block;
+  width:300px;
+  height:50px;
+  margin-bottom: 10px;
+}
+.bottom-block {
+  display: inline-block;
+  width:300px;
+  height:50px;
+}
+
+.card-chip {
+  float:left;
+  margin: 10px;
+}
+.card-name {
+  float:right;
+  margin:15px;
+  position:relative;
+  font-size: 20px;
+  font-weight:550;
+}
+
+.balance {
+  float:left;
+  margin: 20px;
+  position:relative;
+  top:38px;
+}
+.card-balance {
+  font-weight:700;
+  font-size: 30px;
+  margin-top:10px;
+}
+.card-icon {
+  float:right;
+  margin: 0 20px 0 0;
+  margin-top:75px;
+}
+.circle-left {
+  margin-right: -15px;
+  opacity:0.7;
+}
+
+.card-number {
+  font-size: 28px;
+  margin: -15px 0 0 0;
+  text-align-last: center;
+}
+
+div[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  color: black;
+  background-color: white;
+  visibility: visible;
+}
+
+#button3{
+  width: 100px;
+  align-self: flex-end;
+  margin-right: 100px;
+}
