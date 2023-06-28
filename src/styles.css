@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+.content {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+  background-color: bisque;
+  border-radius: 16px;
+  width: 900px;
+  height: 500px;
+  top: 20%;
+  left: 20%;
+}
+
+.button3 {
+  border-radius: 8px;
+  background-image: linear-gradient(
+    rgba(255, 61, 61, 1),
+    rgba(255, 61, 61, 0.8)
+  );
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
