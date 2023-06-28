@@ -23,4 +23,31 @@ export class CardService {
       cardOwnerId
     }, httpOptions);
   }
+
+  addMoney(iban: string, money: number, currency: string): Observable<any>{
+    return this.httpCLient.post('http://localhost:8080/card/add/money',{
+      iban,
+      money,
+      currency
+    }, httpOptions);
+  }
+
+  sendMoney(ibanFrom: string, ibanTo: string, money: number, currency: string, note: string): Observable<any>{
+    return this.httpCLient.post('http://localhost:8080/card/send/money',{
+      ibanFrom,
+      ibanTo,
+      money,
+      currency,
+      note
+    });
+  }
+
+  exchangeMoney(iban: string, money: number, currencyFrom: string, currencyTo: string): Observable<any>{
+    return this.httpCLient.post('http://localhost:8080/card/exchange/money',{
+      iban,
+      money,
+      currencyFrom,
+      currencyTo
+    });
+  }
 }

@@ -1,0 +1,126 @@
+<div class="content">
+  <div class="header">
+    <div class="info">
+      <h1>{{this.user.name}}</h1>
+      <div class="dropdown">
+        <button class="iban-dropdown">{{this.card.iban}}</button>
+        <div class="dropdown-content">
+          <a *ngFor="let card of this.user.cards" #cardIdRef (click)="loadCard(card.iban, 'BGN')">{{card.iban}}</a>
+        </div>
+      </div>
+    </div>
+    <button id = "button3" class="button3" (click)="logOut()">Log Out</button>
+    <button id = "button3" class="button3" (click)="goToHistory()">History</button>
+    <img src="assets/aav.svg">
+  </div>
+  <div class="main-content">
+    <div class="balance-wrap">
+      <h3>Balance: </h3>
+      <div class="sum">
+        <h2>{{money | round}}</h2>
+        <div class="dropdown">
+          <button class="dropdown-btn">{{currency}}</button>
+          <div class="dropdown-content">
+            <a #1 (click)="loadMoney('BGN')">BGN</a>
+            <a #2 (click)="loadMoney('EUR')">EUR</a>
+            <a #3 (click)="loadMoney('USD')">USD</a>
+            <a #4 (click)="loadMoney('GBP')">GBP</a>
+            <a #5 (click)="loadMoney('CAD')">CAD</a>
+            <a #6 (click)="loadMoney('RUB')">RUB</a>
+          </div>
+        </div>
+        <img (click)="loadForm()" id="plus" src="assets/plus.png">
+
+      </div>
+    </div>
+
+    <div id="popup-form" class="hidden">
+      <form (ngSubmit) = "addMoney()">
+        <div class="style-form">
+          <div class="form-elements">
+            <label for="sum">Sum:</label>
+            <input type="number" id="sum" name="sum" [(ngModel)]="moneyToAdd"><br>
+
+            <label for="cars">Currency:</label>
+            <select id="cars">
+              <option>BGN</option>
+              <option>EUR</option>
+              <option>USD</option>
+              <option>GBP</option>
+              <option>CAD</option>
+              <option>RUB</option>
+            </select>
+          </div>
+
+          <input class = "sub" type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+
+    <div id="popup-form1" class="hidden">
+      <form (ngSubmit) = "sendMoney()">
+        <div class="style-form">
+          <div class="form-elements">
+            <label for="sum1">Sum:</label>
+            <input type="number" id="sum1" name="sum1"  [(ngModel)]="moneyToSend"><br>
+
+            <label for="curr">Currency:</label>
+            <select id="curr">
+              <option>BGN</option>
+              <option>EUR</option>
+              <option>USD</option>
+              <option>GBP</option>
+              <option>CAD</option>
+              <option>RUB</option>
+            </select>
+
+            <label for="receiver">Receiver IBAN:</label>
+            <input type="text" id="receiver" name="receiver"  [(ngModel)]="ibanTo" ><br>
+            <label for="receiver">Note:</label>
+            <input type="text" id="note" name="receiver"  [(ngModel)]="note" ><br>
+          </div>
+
+          <input class = "sub" type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+
+    <div id="popup-form2" class="hidden">
+      <form (ngSubmit) = "exchangeMoney()">
+        <div class="style-form">
+          <div class="form-elements">
+            <label for="sum2">Sum:</label>
+            <input type="number" id="sum2" name="sum" [(ngModel)]="moneyToExchange"><br>
+
+            <label for="fromCur">From:</label>
+            <select id="fromCur">
+              <option>BGN</option>
+              <option>EUR</option>
+              <option>USD</option>
+              <option>GBP</option>
+              <option>CAD</option>
+              <option>RUB</option>
+            </select>
+
+            <label for="toCur">To:</label>
+            <select id="toCur">
+              <option>BGN</option>
+              <option>EUR</option>
+              <option>USD</option>
+              <option>GBP</option>
+              <option>CAD</option>
+              <option>RUB</option>
+            </select>
+          </div>
+
+          <input class = "sub" type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+  <button class="action-button" (click)="loadForm1()">Send Money</button>
+  <button class="action-button" (click)="loadForm2()">Exchange Money</button>
+</div>
+
