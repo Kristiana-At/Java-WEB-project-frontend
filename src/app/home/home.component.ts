@@ -170,6 +170,7 @@ export class HomeComponent {
   }
 
   goToHistory() {
-    this.router.navigate(["/history"])
+    const queryParams = { iban: this.card.iban };
+    this.router.navigate(['/history'], { queryParams });
   }
 }

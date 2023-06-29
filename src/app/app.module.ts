@@ -9,6 +9,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { NewCardComponent } from './new-card/new-card.component';
 import { RoundPipe } from './home/pipes/round.pipe';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RoundPipe } from './home/pipes/round.pipe';
     LoginComponent,
     NewCardComponent,
     RegisterComponent,
-    RoundPipe
+    RoundPipe,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
