@@ -11,7 +11,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let t of transactions" class="table-row">
-        <td>{{ t.id }}</td>
+        <td>{{ t.receiver.iban }}</td>
         <td>{{ t.money }}</td>
         <td>{{ t.note }}</td>
         <td>{{ t.date | date : "dd/MM/yyyy" }}</td>
