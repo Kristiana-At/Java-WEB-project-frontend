@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Card} from "../models/card";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {CreateCardResource} from "../models/create-card";
 
 const httpOptions = {
@@ -49,5 +48,11 @@ export class CardService {
       currencyFrom,
       currencyTo
     });
+  }
+
+  getTransactions(iban : string) : Observable<any>
+  {
+    const params = new HttpParams().set('iban', iban)
+    return this.httpCLient.get('http://localhost:8080/card/transactions', {params});
   }
 }
