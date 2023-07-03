@@ -2,12 +2,12 @@
   <div id="divOuter">
     <div id="divInner">
       <form (ngSubmit)="login()">
-        <label>
-          <input type="text" name="username" [(ngModel)]="username" />
-        </label>
-        <label>
-          <input type="password" name="password" [(ngModel)]="password" />
-        </label>
+        <label>Username</label>
+        <input type="text" name="username" [(ngModel)]="username" />
+
+        <label>Password</label>
+        <input type="password" name="password" [(ngModel)]="password" />
+
         <button class="button3" type="submit">Submit</button>
       </form>
       <a routerLink="/register">Don't have an account? Sign up here</a>

@@ -5,7 +5,6 @@ import {LoginComponent} from "./login/login.component";
 import {HomeComponent} from "./home/home.component";
 import {RegisterComponent} from "./register/register.component";
 import {NewCardComponent} from "./new-card/new-card.component";
-import {RegisterComponent} from "./register/register.component";
 
 const appRoutes: Routes = [
   {
